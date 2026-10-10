@@ -1,0 +1,278 @@
+{
+  "generated_at_utc": "2026-10-04T12:56:14.190936+00:00",
+  "property_dataset": {
+    "path": "C:\\Users\\Amar Sai\\House price prediction\\data\\raw\\bengaluru_house_data_raw.csv",
+    "file_size_bytes": 938020,
+    "rows": 13320,
+    "columns": 9,
+    "column_names": [
+      "area_type",
+      "availability",
+      "location",
+      "size",
+      "society",
+      "total_sqft",
+      "bath",
+      "balcony",
+      "price"
+    ],
+    "unique_locations": 1305,
+    "duplicate_rows": 529,
+    "locations_with_ge_10_records": 253,
+    "locations_with_lt_10_records": 1053,
+    "range_total_sqft_rows": 201,
+    "unusual_non_numeric_total_sqft_rows": 46,
+    "date_available": false,
+    "missing_values": {
+      "area_type": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "availability": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "location": {
+        "count": 1,
+        "pct": 0.01
+      },
+      "size": {
+        "count": 16,
+        "pct": 0.12
+      },
+      "society": {
+        "count": 5502,
+        "pct": 41.31
+      },
+      "total_sqft": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "bath": {
+        "count": 73,
+        "pct": 0.55
+      },
+      "balcony": {
+        "count": 609,
+        "pct": 4.57
+      },
+      "price": {
+        "count": 0,
+        "pct": 0.0
+      }
+    },
+    "price_stats_lakhs": {
+      "count": 13320,
+      "min": 8.0,
+      "max": 3600.0,
+      "mean": 112.5656265015015,
+      "median": 72.0,
+      "std": 148.97167376967403,
+      "p01": 18.5,
+      "p05": 31.5,
+      "p95": 324.0,
+      "p99": 658.0999999999949
+    },
+    "total_sqft_stats": {
+      "count": 13308,
+      "min": 1.0,
+      "max": 52272.0,
+      "mean": 1557.2551581755336,
+      "median": 1275.0,
+      "std": 1238.7206086116823,
+      "p01": 485.0,
+      "p05": 662.0,
+      "p95": 3250.0,
+      "p99": 5000.0
+    },
+    "price_per_sqft_stats_inr": {
+      "count": 13308,
+      "min": 267.82981328435875,
+      "max": 16000000.0,
+      "mean": 12284.88678337491,
+      "median": 5442.032310486569,
+      "std": 225731.83152214414,
+      "p01": 2527.165991902834,
+      "p05": 3100.0,
+      "p95": 15526.029547553086,
+      "p99": 25000.0
+    },
+    "suspicious_values": {
+      "missing_location": 1,
+      "missing_total_sqft": 0,
+      "missing_price": 0,
+      "range_total_sqft_rows": 201,
+      "unusual_non_numeric_total_sqft_rows": 46,
+      "price_non_positive": 0,
+      "sqft_non_positive": 0,
+      "bath_gt_bhk_plus_2": 16,
+      "bhk_ge_10": 26,
+      "bath_ge_10": 33,
+      "sqft_lt_100": 21,
+      "sqft_gt_20000": 7,
+      "price_lakhs_gt_2000": 13,
+      "price_per_sqft_lt_1000": 11,
+      "price_per_sqft_gt_50000": 32,
+      "unrealistic_tiny_home": 18
+    },
+    "potential_outliers": {
+      "price_iqr_outliers": 1276,
+      "sqft_iqr_outliers": 1191,
+      "price_per_sqft_iqr_outliers": 1287
+    }
+  },
+  "market_dataset": {
+    "path": "C:\\Users\\Amar Sai\\House price prediction\\data\\raw\\bengaluru_market_history_raw.csv",
+    "file_size_bytes": 34175,
+    "rows": 528,
+    "columns": 9,
+    "column_names": [
+      "date",
+      "year",
+      "month",
+      "area",
+      "avg_price_per_sqft",
+      "base_price",
+      "index_100",
+      "avg_price_prev_year",
+      "yoy_pct"
+    ],
+    "unique_areas": 4,
+    "min_date": "2015-01-01",
+    "max_date": "2025-12-01",
+    "months_represented": 132,
+    "years_represented": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "duplicate_rows": 0,
+    "missing_values": {
+      "date": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "year": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "month": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "area": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "avg_price_per_sqft": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "base_price": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "index_100": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "avg_price_prev_year": {
+        "count": 48,
+        "pct": 9.09
+      },
+      "yoy_pct": {
+        "count": 48,
+        "pct": 9.09
+      }
+    },
+    "avg_price_per_sqft_stats": {
+      "count": 528,
+      "min": 2806.54,
+      "max": 16477.95,
+      "mean": 7053.389450757575,
+      "median": 6127.745,
+      "std": 3466.2241605486283,
+      "p01": 2835.1196,
+      "p05": 3287.3945000000003,
+      "p95": 14632.695,
+      "p99": 16173.0375
+    },
+    "yoy_pct_stats": {
+      "count": 480,
+      "min": 1.3,
+      "max": 14.82,
+      "mean": 6.6118125,
+      "median": 6.48,
+      "std": 3.026850931553716,
+      "p01": 1.7538,
+      "p05": 2.6185,
+      "p95": 12.440999999999999,
+      "p99": 13.6021
+    },
+    "areas_complete_coverage": [
+      "Devanahalli",
+      "Indiranagar",
+      "Whitefield",
+      "Yelahanka"
+    ],
+    "areas_near_complete_coverage": [],
+    "areas_insufficient_coverage": [],
+    "records_per_area": {
+      "Devanahalli": 132,
+      "Indiranagar": 132,
+      "Whitefield": 132,
+      "Yelahanka": 132
+    }
+  },
+  "locality_overlap": {
+    "exact_matches": 3,
+    "exact_match_names": [
+      "Devanahalli",
+      "Whitefield",
+      "Yelahanka"
+    ],
+    "normalized_matches": 3,
+    "normalized_match_pairs_sample": [
+      {
+        "property_location": "Devanahalli",
+        "market_area": "Devanahalli",
+        "normalized": "devanahalli"
+      },
+      {
+        "property_location": "Devanahalli Road",
+        "market_area": "Devanahalli",
+        "normalized": "devanahalli"
+      },
+      {
+        "property_location": "Whitefield",
+        "market_area": "Whitefield",
+        "normalized": "whitefield"
+      },
+      {
+        "property_location": "Whitefield,",
+        "market_area": "Whitefield",
+        "normalized": "whitefield"
+      },
+      {
+        "property_location": "Yelahanka",
+        "market_area": "Yelahanka",
+        "normalized": "yelahanka"
+      }
+    ],
+    "property_locations_without_market": 1289,
+    "market_areas_without_property": 1,
+    "market_areas_without_property_names": [
+      "Indiranagar"
+    ],
+    "property_rows_with_normalized_market_overlap": 803,
+    "property_rows_total_non_null_location": 13319
+  }
+}

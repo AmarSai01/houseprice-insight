@@ -1,0 +1,333 @@
+/* Affordability presentation — product skin from EstimatePage.css */
+
+.hpi-est-afford-workspace {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3rem);
+  padding-top: 0.25rem;
+}
+
+@media (min-width: 980px) {
+  .hpi-est-afford-workspace {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+/* Form grouping */
+.hpi-affordability .hpi-est-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hpi-aff-group {
+  padding: 0 0 1.15rem;
+  margin-bottom: 1.15rem;
+  border-bottom: 1px solid var(--ed-line);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hpi-aff-group--last {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.hpi-aff-group-label {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-affordability .hpi-est-field {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.hpi-affordability .hpi-est-field-row {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 560px) {
+  .hpi-affordability .hpi-est-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hpi-affordability .hpi-est-field-row .hpi-est-field {
+    padding: 0;
+    border-left: 0;
+  }
+}
+
+.hpi-aff-context {
+  margin: 0.85rem 0 0;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ed-accent);
+  font-weight: 600;
+}
+
+.hpi-aff-loan-derived {
+  padding: 0.9rem 0 0;
+  border-top: 1px dashed var(--ed-line);
+}
+
+.hpi-aff-loan-value {
+  margin: 0.2rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-aff-loan-hint,
+.hpi-aff-field-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--ed-faint);
+}
+
+/* Interpretation */
+.hpi-aff-interpret {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+}
+
+.hpi-aff-interpret-h {
+  margin: 0 0 0.55rem;
+  font-family: var(--ed-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+}
+
+.hpi-aff-interpret-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--ed-mute);
+}
+
+.hpi-aff-interpret-list li + li {
+  margin-top: 0.35rem;
+}
+
+/* Results panel */
+.hpi-est-afford-results {
+  padding: clamp(1.15rem, 3vw, 1.55rem);
+  border: 1px solid var(--ed-line);
+  background: var(--ed-surface);
+}
+
+.hpi-affordability .hpi-est-afford-results .hpi-est-col-label {
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-est-afford-empty {
+  max-width: 22rem;
+}
+
+.hpi-est-afford-empty p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ed-mute);
+}
+
+.hpi-aff-emi-block {
+  margin: 0 0 1.25rem;
+  padding: 1rem clamp(0.85rem, 2vw, 1.1rem);
+  background: color-mix(in srgb, var(--ed-accent) 5%, var(--ed-surface));
+  border: 1px solid var(--ed-line);
+}
+
+.hpi-est-afford-emi {
+  margin: 0.25rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(2.75rem, 6vw, 3.85rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--ed-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-est-afford-emi small {
+  margin-left: 0.35rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ed-mute);
+  vertical-align: middle;
+}
+
+.hpi-aff-facts {
+  margin: 0;
+  padding: 0;
+}
+
+.hpi-est-afford-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.92rem;
+  color: var(--ed-mute);
+}
+
+.hpi-est-afford-row dt {
+  margin: 0;
+  font-weight: 500;
+}
+
+.hpi-est-afford-row dd {
+  margin: 0;
+  font-weight: 600;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.hpi-est-afford-row--total {
+  margin-top: 0.15rem;
+  border-bottom: 0;
+  color: var(--ed-ink);
+}
+
+.hpi-est-afford-row--total dt,
+.hpi-est-afford-row--total dd {
+  font-family: var(--ed-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Principal / interest bar */
+.hpi-aff-breakdown {
+  margin-top: 1.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-aff-section-h {
+  margin: 0 0 0.75rem;
+  font-family: var(--ed-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+}
+
+.hpi-aff-bar {
+  display: flex;
+  width: 100%;
+  height: 0.55rem;
+  overflow: hidden;
+  background: var(--ed-bg);
+  border: 1px solid var(--ed-line);
+}
+
+.hpi-aff-bar-principal {
+  display: block;
+  height: 100%;
+  background: var(--ed-accent);
+}
+
+.hpi-aff-bar-interest {
+  display: block;
+  height: 100%;
+  background: color-mix(in srgb, var(--ed-accent) 28%, var(--ed-line));
+}
+
+.hpi-aff-bar-legend {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.35rem;
+  font-size: 0.88rem;
+  color: var(--ed-mute);
+}
+
+.hpi-aff-bar-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hpi-aff-swatch {
+  width: 0.65rem;
+  height: 0.65rem;
+  flex-shrink: 0;
+}
+
+.hpi-aff-swatch--principal {
+  background: var(--ed-accent);
+}
+
+.hpi-aff-swatch--interest {
+  background: color-mix(in srgb, var(--ed-accent) 28%, var(--ed-line));
+}
+
+/* Income share */
+.hpi-aff-income {
+  margin-top: 1.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-aff-income-value {
+  margin: 0.2rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-est-afford-note {
+  margin: 0.65rem 0 0;
+  max-width: 28rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ed-faint);
+}
+
+.hpi-affordability .hpi-est-disclaimer {
+  margin: 1.5rem 0 0;
+  max-width: 34rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ed-faint);
+}
+
+@media (max-width: 979px) {
+  .hpi-aff-emi-block {
+    margin-inline: 0;
+  }
+}

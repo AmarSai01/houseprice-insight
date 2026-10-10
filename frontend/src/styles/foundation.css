@@ -1,0 +1,302 @@
+/**
+ * Architectural Intelligence — shared visual primitives
+ *
+ * Fonts load from index.html (avoid nested @import inside files imported by
+ * index.css — that triggers Vite/PostCSS "@import must precede" failures).
+ *
+ * Contrast rule: primary CTAs need `a.` specificity vs global `a { color: inherit }`.
+ */
+
+.hpi-focus-ring:focus-visible {
+  outline: var(--hpi-focus-ring);
+  outline-offset: var(--hpi-focus-offset);
+}
+
+/* Type */
+.hpi-type-display {
+  font-family: var(--hpi-font-heading);
+  font-size: var(--hpi-text-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  color: var(--hpi-color-ink);
+}
+
+.hpi-type-section {
+  font-family: var(--hpi-font-heading);
+  font-size: var(--hpi-text-display-sm);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--hpi-color-ink);
+}
+
+.hpi-type-body {
+  font-family: var(--hpi-font-body);
+  font-size: var(--hpi-text-base);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--hpi-color-mute);
+}
+
+.hpi-type-label {
+  font-family: var(--hpi-font-label);
+  font-size: var(--hpi-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hpi-color-faint);
+}
+
+.hpi-type-metric {
+  font-family: var(--hpi-font-metric);
+  font-size: var(--hpi-text-metric);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  color: var(--hpi-metric-fg);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Buttons */
+.hpi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hpi-space-2);
+  min-height: var(--hpi-touch-min);
+  padding: 0.7rem 1.35rem;
+  border-radius: var(--hpi-radius-md);
+  border: var(--hpi-border-width) solid transparent;
+  font-family: var(--hpi-font-body);
+  font-size: var(--hpi-text-md);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background var(--hpi-duration-base) var(--hpi-ease-standard),
+    color var(--hpi-duration-base) var(--hpi-ease-standard),
+    border-color var(--hpi-duration-base) var(--hpi-ease-standard),
+    transform var(--hpi-duration-base) var(--hpi-ease-standard);
+}
+
+.hpi-btn:focus-visible {
+  outline: var(--hpi-focus-ring);
+  outline-offset: var(--hpi-focus-offset);
+}
+
+.hpi-btn--primary,
+a.hpi-btn--primary {
+  background: var(--hpi-btn-primary-bg);
+  border-color: var(--hpi-btn-primary-border);
+  color: var(--hpi-btn-primary-fg);
+}
+
+.hpi-btn--primary:hover,
+.hpi-btn--primary:focus-visible,
+.hpi-btn--primary:active,
+a.hpi-btn--primary:hover,
+a.hpi-btn--primary:focus-visible,
+a.hpi-btn--primary:active {
+  background: var(--hpi-btn-primary-bg-hover);
+  border-color: var(--hpi-btn-primary-bg-hover);
+  color: var(--hpi-btn-primary-fg);
+  transform: translateY(-2px);
+}
+
+.hpi-btn--primary:disabled,
+.hpi-btn--primary[aria-disabled="true"],
+a.hpi-btn--primary[aria-disabled="true"] {
+  color: var(--hpi-btn-primary-fg);
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hpi-btn--secondary,
+a.hpi-btn--secondary {
+  background: var(--hpi-btn-secondary-bg);
+  border-color: var(--hpi-btn-secondary-border);
+  color: var(--hpi-btn-secondary-fg);
+}
+
+.hpi-btn--secondary:hover,
+a.hpi-btn--secondary:hover {
+  border-color: var(--hpi-color-accent);
+  color: var(--hpi-color-accent);
+}
+
+.hpi-btn--ghost,
+a.hpi-btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--hpi-btn-ghost-fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+  min-height: 2.4rem;
+  padding-inline: 0.25rem;
+}
+
+.hpi-btn--ghost:hover,
+a.hpi-btn--ghost:hover {
+  color: var(--hpi-btn-ghost-fg-hover);
+}
+
+.hpi-link {
+  color: var(--hpi-color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  transition: color var(--hpi-duration-fast) var(--hpi-ease-standard);
+}
+
+.hpi-link:hover {
+  color: var(--hpi-color-accent-hover);
+}
+
+.hpi-link:focus-visible {
+  outline: var(--hpi-focus-ring);
+  outline-offset: var(--hpi-focus-offset);
+}
+
+/* Section */
+.hpi-section-eyebrow {
+  margin: 0 0 var(--hpi-space-3);
+  font-family: var(--hpi-font-label);
+  font-size: var(--hpi-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hpi-color-faint);
+}
+
+.hpi-section-title {
+  margin: 0;
+  font-family: var(--hpi-font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.65rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--hpi-color-ink);
+}
+
+.hpi-section-lead {
+  margin: var(--hpi-space-4) 0 0;
+  max-width: var(--hpi-max-prose);
+  font-family: var(--hpi-font-body);
+  font-size: var(--hpi-text-base);
+  line-height: 1.6;
+  color: var(--hpi-color-mute);
+}
+
+/* Metric */
+.hpi-metric {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hpi-space-2);
+}
+
+.hpi-metric__label {
+  font-family: var(--hpi-font-label);
+  font-size: var(--hpi-text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hpi-color-faint);
+}
+
+.hpi-metric__value {
+  font-family: var(--hpi-font-metric);
+  font-size: var(--hpi-text-metric);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  color: var(--hpi-metric-fg);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-metric__value--accent {
+  color: var(--hpi-metric-accent-fg);
+}
+
+.hpi-metric__hint {
+  font-size: var(--hpi-text-sm);
+  color: var(--hpi-color-faint);
+}
+
+.hpi-spec-row {
+  margin: 0;
+  font-family: var(--hpi-font-body);
+  font-size: var(--hpi-text-md);
+  line-height: 1.5;
+  color: var(--hpi-color-mute);
+}
+
+.hpi-data-panel {
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: var(--hpi-line-hairline);
+  background: var(--hpi-color-surface);
+}
+
+.hpi-data-rule {
+  border: 0;
+  border-top: var(--hpi-line-hairline);
+  margin: var(--hpi-space-8) 0;
+}
+
+.hpi-notice {
+  margin: 0;
+  max-width: var(--hpi-max-measure);
+  font-size: var(--hpi-text-sm);
+  line-height: 1.5;
+  color: var(--hpi-notice-fg);
+}
+
+.hpi-notice--error {
+  color: var(--hpi-error-fg);
+}
+
+.hpi-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--hpi-space-2);
+  font-size: var(--hpi-text-md);
+  color: var(--hpi-color-mute);
+}
+
+/* Editorial image treatment */
+.hpi-media {
+  overflow: hidden;
+  background: var(--hpi-color-bg-muted);
+}
+
+.hpi-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--hpi-duration-slow) var(--hpi-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hpi-media:hover img {
+    transform: scale(1.025);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hpi-btn,
+  .hpi-link,
+  .hpi-media img {
+    transition: none !important;
+  }
+
+  .hpi-btn--primary:hover,
+  a.hpi-btn--primary:hover,
+  .hpi-media:hover img {
+    transform: none !important;
+  }
+}

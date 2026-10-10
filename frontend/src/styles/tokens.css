@@ -1,0 +1,194 @@
+/**
+ * HousePrice Insight — Architectural Intelligence design tokens
+ *
+ * Visual language: warm stone · charcoal · deep architectural green
+ * Display: Literata · UI: Source Sans 3
+ *
+ * Do not invent market statistics or property listings in CSS.
+ */
+
+:root {
+  /* Neutrals — stone / sand */
+  --hpi-raw-warm-50: #f7f6f2;
+  --hpi-raw-warm-100: #f3f1eb;
+  --hpi-raw-warm-150: #ebe8e0;
+  --hpi-raw-warm-200: #e4e0d6;
+  --hpi-raw-warm-300: #d2cdc2;
+  --hpi-raw-warm-500: #8a857c;
+  --hpi-raw-warm-600: #5c574f;
+  --hpi-raw-warm-900: #161513;
+  --hpi-raw-white: #fffcf7;
+
+  /* Brand / architecture green */
+  --hpi-raw-green-700: #2a3a32;
+  --hpi-raw-green-800: #1f2c26;
+  --hpi-raw-green-900: #17211d;
+  --hpi-raw-green-500: #7faf9b;
+
+  /* Feedback */
+  --hpi-raw-danger-700: #8a4030;
+  --hpi-raw-danger-300: #e8b4a8;
+  --hpi-raw-warning-700: #8a6a30;
+  --hpi-raw-success-700: #2a3a32;
+
+  /* Legacy cinematic (auth residual / unused shells) */
+  --hpi-raw-navy-900: #101722;
+  --hpi-raw-navy-950: #0d121b;
+  --hpi-raw-teal-600: #2f7d6c;
+  --hpi-raw-teal-800: #173f3a;
+
+  /* Typography */
+  --hpi-font-display: "Literata", "Georgia", "Times New Roman", serif;
+  --hpi-font-ui: "Source Sans 3", "Source Sans Pro", ui-sans-serif, system-ui,
+    sans-serif;
+  --hpi-font-mono: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
+
+  /* Type scale — editorial range */
+  --hpi-text-xs: 0.7rem;
+  --hpi-text-sm: 0.84rem;
+  --hpi-text-md: 0.95rem;
+  --hpi-text-base: 1.06rem;
+  --hpi-text-lg: 1.18rem;
+  --hpi-text-xl: 1.4rem;
+  --hpi-text-2xl: 1.85rem;
+  --hpi-text-3xl: 2.35rem;
+  --hpi-text-4xl: 3rem;
+  --hpi-text-display: clamp(2.35rem, 6.5vw, 4.25rem);
+  --hpi-text-display-sm: clamp(1.85rem, 4vw, 2.75rem);
+  --hpi-text-metric: clamp(2.4rem, 5vw, 3.75rem);
+  --hpi-text-metric-lg: clamp(2.85rem, 6vw, 4.5rem);
+  --hpi-text-brand: clamp(0.95rem, 1.4vw, 1.05rem);
+
+  /* Spacing */
+  --hpi-space-0: 0;
+  --hpi-space-1: 0.25rem;
+  --hpi-space-2: 0.5rem;
+  --hpi-space-3: 0.75rem;
+  --hpi-space-4: 1rem;
+  --hpi-space-5: 1.25rem;
+  --hpi-space-6: 1.5rem;
+  --hpi-space-7: 1.75rem;
+  --hpi-space-8: 2rem;
+  --hpi-space-10: 2.5rem;
+  --hpi-space-12: 3rem;
+  --hpi-space-16: 4rem;
+  --hpi-space-20: 5rem;
+  --hpi-space-24: 6rem;
+
+  /* Radii — architectural, restrained */
+  --hpi-radius-none: 0;
+  --hpi-radius-sm: 0.1rem;
+  --hpi-radius-md: 0.15rem;
+  --hpi-radius-lg: 0.25rem;
+  --hpi-radius-full: 9999px;
+
+  --hpi-border-width: 1px;
+
+  --hpi-shadow-none: none;
+  --hpi-shadow-sm: 0 1px 0 color-mix(in srgb, var(--hpi-raw-warm-900) 5%, transparent);
+
+  /* Layout — wider editorial measure */
+  --hpi-max-content: 76rem;
+  --hpi-max-prose: 36rem;
+  --hpi-max-measure: 40rem;
+  --hpi-pad-page: clamp(1.25rem, 4.5vw, 2.75rem);
+
+  /* Motion */
+  --hpi-ease-standard: cubic-bezier(0.22, 0.8, 0.24, 1);
+  --hpi-duration-fast: 140ms;
+  --hpi-duration-base: 200ms;
+  --hpi-duration-slow: 360ms;
+
+  --hpi-focus-width: 2px;
+  --hpi-focus-offset: 3px;
+  --hpi-touch-min: 2.5rem;
+
+  /* Semantic */
+  --hpi-color-bg: var(--hpi-raw-warm-100);
+  --hpi-color-bg-muted: var(--hpi-raw-warm-150);
+  --hpi-color-surface: var(--hpi-raw-white);
+  --hpi-color-ink: var(--hpi-raw-warm-900);
+  --hpi-color-mute: var(--hpi-raw-warm-600);
+  --hpi-color-faint: var(--hpi-raw-warm-500);
+  --hpi-color-line: var(--hpi-raw-warm-300);
+  --hpi-color-accent: var(--hpi-raw-green-700);
+  --hpi-color-accent-hover: var(--hpi-raw-green-800);
+  --hpi-color-accent-deep: var(--hpi-raw-green-900);
+  --hpi-color-on-accent: var(--hpi-raw-warm-50);
+  --hpi-color-danger: var(--hpi-raw-danger-700);
+  --hpi-color-warning: var(--hpi-raw-warning-700);
+  --hpi-color-success: var(--hpi-raw-success-700);
+  --hpi-color-up: var(--hpi-raw-green-700);
+  --hpi-color-down: var(--hpi-raw-danger-700);
+
+  --hpi-font-heading: var(--hpi-font-display);
+  --hpi-font-body: var(--hpi-font-ui);
+  --hpi-font-label: var(--hpi-font-ui);
+  --hpi-font-metric: var(--hpi-font-display);
+
+  --hpi-line-hairline: var(--hpi-border-width) solid var(--hpi-color-line);
+  --hpi-focus-ring: var(--hpi-focus-width) solid var(--hpi-color-accent);
+
+  /* Component */
+  --hpi-btn-primary-bg: var(--hpi-color-accent);
+  --hpi-btn-primary-bg-hover: var(--hpi-color-accent-hover);
+  --hpi-btn-primary-fg: var(--hpi-color-on-accent);
+  --hpi-btn-primary-border: var(--hpi-color-accent);
+
+  --hpi-btn-secondary-bg: transparent;
+  --hpi-btn-secondary-fg: var(--hpi-color-ink);
+  --hpi-btn-secondary-border: var(--hpi-color-line);
+
+  --hpi-btn-ghost-fg: var(--hpi-color-mute);
+  --hpi-btn-ghost-fg-hover: var(--hpi-color-ink);
+
+  --hpi-nav-fg: var(--hpi-color-mute);
+  --hpi-nav-fg-active: var(--hpi-color-ink);
+  --hpi-nav-bg: color-mix(in srgb, var(--hpi-color-bg) 92%, transparent);
+
+  --hpi-input-bg: var(--hpi-color-bg);
+  --hpi-input-border: var(--hpi-color-line);
+  --hpi-input-fg: var(--hpi-color-ink);
+  --hpi-input-placeholder: var(--hpi-color-faint);
+
+  --hpi-metric-fg: var(--hpi-color-ink);
+  --hpi-metric-accent-fg: var(--hpi-color-accent);
+
+  --hpi-notice-fg: var(--hpi-color-faint);
+  --hpi-error-fg: var(--hpi-color-danger);
+}
+
+/* Bridge legacy page vars → Architectural Intelligence tokens */
+.hpi-ds {
+  --hp-bg: var(--hpi-color-bg);
+  --hp-surface: var(--hpi-color-surface);
+  --hp-muted-band: var(--hpi-color-bg-muted);
+  --hp-ink: var(--hpi-color-ink);
+  --hp-mute: var(--hpi-color-mute);
+  --hp-faint: var(--hpi-color-faint);
+  --hp-line: var(--hpi-color-line);
+  --hp-accent: var(--hpi-color-accent);
+  --hp-accent-hover: var(--hpi-color-accent-hover);
+  --hp-on-accent: var(--hpi-color-on-accent);
+  --hp-up: var(--hpi-color-up);
+  --hp-down: var(--hpi-color-down);
+  --hp-display: var(--hpi-font-heading);
+  --hp-body: var(--hpi-font-body);
+  --hp-max: var(--hpi-max-content);
+  --hp-pad: var(--hpi-pad-page);
+
+  --ed-bg: var(--hpi-color-bg);
+  --ed-surface: var(--hpi-color-surface);
+  --ed-ink: var(--hpi-color-ink);
+  --ed-mute: var(--hpi-color-mute);
+  --ed-faint: var(--hpi-color-faint);
+  --ed-line: var(--hpi-color-line);
+  --ed-accent: var(--hpi-color-accent);
+  --ed-accent-hover: var(--hpi-color-accent-hover);
+  --ed-on-accent: var(--hpi-color-on-accent);
+  --ed-danger: var(--hpi-color-danger);
+  --ed-serif: var(--hpi-font-heading);
+  --ed-sans: var(--hpi-font-body);
+  --ed-pad: var(--hpi-pad-page);
+  --ed-max: var(--hpi-max-content);
+}

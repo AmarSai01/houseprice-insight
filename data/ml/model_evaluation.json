@@ -1,0 +1,45 @@
+{
+  "selected_model": "RandomForestRegressor",
+  "selection_metric": "cv_mae_mean",
+  "cv_results": {
+    "LinearRegression": {
+      "cv_mae_mean": 41.01956299586056,
+      "cv_mae_std": 1.424498426189466,
+      "cv_rmse_mean": 87.76131395104538,
+      "cv_rmse_std": 5.554328636978344,
+      "cv_r2_mean": 0.634203160601488,
+      "cv_r2_std": 0.026773932112375415
+    },
+    "RandomForestRegressor": {
+      "cv_mae_mean": 33.06882982563963,
+      "cv_mae_std": 1.3312035909700124,
+      "cv_rmse_mean": 81.72430842057975,
+      "cv_rmse_std": 6.537522575490865,
+      "cv_r2_mean": 0.6824115050624149,
+      "cv_r2_std": 0.03520695170875633
+    },
+    "HistGradientBoostingRegressor": {
+      "cv_mae_mean": 33.71146534779317,
+      "cv_mae_std": 1.1156999207840683,
+      "cv_rmse_mean": 82.72529109918993,
+      "cv_rmse_std": 4.278912938201808,
+      "cv_r2_mean": 0.6751872620426862,
+      "cv_r2_std": 0.011303791862599648
+    }
+  },
+  "final_test_metrics": {
+    "mae": 30.824051491492362,
+    "rmse": 71.12139031318152,
+    "r2": 0.6885026261968055
+  },
+  "prediction_range": {
+    "method": "out_of_fold_residual_percentiles",
+    "description": "Estimated price range based on model prediction error using 10th/90th percentiles of out-of-fold residuals on the training set. This is not a statistical confidence interval.",
+    "residual_p10_lakhs": -37.838818562388056,
+    "residual_p90_lakhs": 39.40656735143442,
+    "mae_oof_lakhs": 33.06906402874998,
+    "supported": true
+  },
+  "train_size": 10143,
+  "test_size": 2536
+}

@@ -1,0 +1,167 @@
+{
+  "model_name": "RandomForestRegressor",
+  "model_version": "1.0.0",
+  "training_date_utc": "2026-10-04T13:12:22.078323+00:00",
+  "dataset_name": "bengaluru_property_clean.csv",
+  "dataset_path": "C:\\Users\\Amar Sai\\House price prediction\\data\\processed\\bengaluru_property_clean.csv",
+  "dataset_row_count_total_clean": 12679,
+  "dataset_row_count_model_usable": 12679,
+  "feature_names_raw": [
+    "area_type",
+    "location",
+    "availability",
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony"
+  ],
+  "feature_names_model": [
+    "area_type",
+    "location",
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony",
+    "is_ready_to_move"
+  ],
+  "excluded_features": [
+    "price_per_sqft",
+    "society",
+    "raw availability date categories",
+    "market_area / market history features"
+  ],
+  "target_name": "price",
+  "target_unit": "INR_lakhs",
+  "train_size": 10143,
+  "test_size": 2536,
+  "random_state": 42,
+  "rare_location_min_count": 10,
+  "cv_metrics": {
+    "LinearRegression": {
+      "cv_mae_mean": 41.01956299586056,
+      "cv_mae_std": 1.424498426189466,
+      "cv_rmse_mean": 87.76131395104538,
+      "cv_rmse_std": 5.554328636978344,
+      "cv_r2_mean": 0.634203160601488,
+      "cv_r2_std": 0.026773932112375415
+    },
+    "RandomForestRegressor": {
+      "cv_mae_mean": 33.06882982563963,
+      "cv_mae_std": 1.3312035909700124,
+      "cv_rmse_mean": 81.72430842057975,
+      "cv_rmse_std": 6.537522575490865,
+      "cv_r2_mean": 0.6824115050624149,
+      "cv_r2_std": 0.03520695170875633
+    },
+    "HistGradientBoostingRegressor": {
+      "cv_mae_mean": 33.71146534779317,
+      "cv_mae_std": 1.1156999207840683,
+      "cv_rmse_mean": 82.72529109918993,
+      "cv_rmse_std": 4.278912938201808,
+      "cv_r2_mean": 0.6751872620426862,
+      "cv_r2_std": 0.011303791862599648
+    }
+  },
+  "selected_model_cv_metrics": {
+    "cv_mae_mean": 33.06882982563963,
+    "cv_mae_std": 1.3312035909700124,
+    "cv_rmse_mean": 81.72430842057975,
+    "cv_rmse_std": 6.537522575490865,
+    "cv_r2_mean": 0.6824115050624149,
+    "cv_r2_std": 0.03520695170875633
+  },
+  "final_test_metrics": {
+    "mae": 30.824051491492362,
+    "rmse": 71.12139031318152,
+    "r2": 0.6885026261968055
+  },
+  "selection_rule": "Lowest cross-validated MAE on training folds",
+  "prediction_range": {
+    "method": "out_of_fold_residual_percentiles",
+    "description": "Estimated price range based on model prediction error using 10th/90th percentiles of out-of-fold residuals on the training set. This is not a statistical confidence interval.",
+    "residual_p10_lakhs": -37.838818562388056,
+    "residual_p90_lakhs": 39.40656735143442,
+    "mae_oof_lakhs": 33.06906402874998,
+    "supported": true
+  },
+  "sample_predictions_lakhs": [
+    135.27423547619048,
+    130.7971989320033,
+    151.47031438757344
+  ],
+  "unseen_location_smoke_prediction_lakhs": 138.43897309523805,
+  "artifact_paths": {
+    "model": "C:\\Users\\Amar Sai\\House price prediction\\backend\\ml\\house_price_model.pkl",
+    "metadata": "C:\\Users\\Amar Sai\\House price prediction\\backend\\ml\\model_metadata.json",
+    "comparison_csv": "C:\\Users\\Amar Sai\\House price prediction\\data\\ml\\model_comparison.csv"
+  },
+  "limitations": [
+    "Predictions are model estimates from historical listing-style data, not professional valuations.",
+    "Target unit is INR lakhs.",
+    "price_per_sqft is excluded to prevent target leakage.",
+    "Market-history dataset is not used in training.",
+    "Rare localities are grouped as Other; estimates for sparse areas are less reliable.",
+    "No property transaction date was available for time-aware validation.",
+    "Estimated price range is residual-based and is not a confidence interval.",
+    "Feature influence is global model-level permutation importance, not a local rupee attribution for an individual estimate."
+  ],
+  "global_feature_influence": {
+    "type": "global_feature_influence",
+    "scope": "model",
+    "method": "permutation_importance_mae",
+    "note": "Shows which property characteristics generally influence this model the most. This is not a breakdown of rupees for this specific estimate.",
+    "normalization": "Each importance is raw permutation MAE divided by the sum of raw permutation MAE across features (relative share). Not a probability, price percentage, or rupee contribution.",
+    "source_csv": "data/ml/permutation_importance_raw_features.csv",
+    "factors": [
+      {
+        "feature": "total_sqft",
+        "label": "Property size",
+        "importance": 0.549397,
+        "rank": 1,
+        "raw_importance_mae": 57.692226
+      },
+      {
+        "feature": "bath",
+        "label": "Bathrooms",
+        "importance": 0.140898,
+        "rank": 2,
+        "raw_importance_mae": 14.795671
+      },
+      {
+        "feature": "area_type",
+        "label": "Area type",
+        "importance": 0.102782,
+        "rank": 3,
+        "raw_importance_mae": 10.793113
+      },
+      {
+        "feature": "location",
+        "label": "Location",
+        "importance": 0.086346,
+        "rank": 4,
+        "raw_importance_mae": 9.067235
+      },
+      {
+        "feature": "bhk",
+        "label": "Bedrooms",
+        "importance": 0.066213,
+        "rank": 5,
+        "raw_importance_mae": 6.953045
+      },
+      {
+        "feature": "balcony",
+        "label": "Balcony",
+        "importance": 0.035906,
+        "rank": 6,
+        "raw_importance_mae": 3.770502
+      },
+      {
+        "feature": "availability",
+        "label": "Availability",
+        "importance": 0.018458,
+        "rank": 7,
+        "raw_importance_mae": 1.938263
+      }
+    ]
+  }
+}

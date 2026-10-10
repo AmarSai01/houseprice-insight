@@ -1,0 +1,43 @@
+{
+  "property": {
+    "raw_rows": 13320,
+    "clean_rows": 12679,
+    "duplicates_removed": 530,
+    "duplicates_removed_raw_exact": 529,
+    "duplicates_removed_post_transform": 1,
+    "range_sqft_conversions": 200,
+    "unit_sqft_conversions": 43,
+    "outlier_rows_removed": 91,
+    "unique_locations": 1265,
+    "market_records_mapped": 776,
+    "market_records_not_mapped": 11903,
+    "mapped_locations": [
+      "Devanahalli",
+      "Devanahalli Road",
+      "Whitefield",
+      "Yelahanka"
+    ]
+  },
+  "market": {
+    "raw_rows": 528,
+    "clean_rows": 528,
+    "unique_areas": 4,
+    "min_date": "2015-01-01",
+    "max_date": "2025-12-01",
+    "yoy_missing": 48
+  },
+  "validation": {
+    "no_nonpositive_property_price": true,
+    "no_nonpositive_property_sqft": true,
+    "property_numeric_ok": true,
+    "property_no_duplicate_rows": true,
+    "market_dates_parseable": true,
+    "market_areas_valid": true,
+    "market_no_duplicate_rows": true,
+    "market_numeric_ok": true,
+    "raw_property_hash_unchanged": true,
+    "raw_market_hash_unchanged": true,
+    "house_data_csv_exists": true,
+    "house_data_csv_bytes": 1663
+  }
+}

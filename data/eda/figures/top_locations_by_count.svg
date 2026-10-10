@@ -1,0 +1,37 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500'>
+<rect width='100%' height='100%' fill='white'/>
+<text x='450.0' y='24' text-anchor='middle' font-size='16' font-family='Segoe UI, Arial'>Top 15 localities by record count</text>
+<line x1='70' y1='40' x2='70' y2='380' stroke='#333'/>
+<line x1='70' y1='380' x2='880' y2='380' stroke='#333'/>
+<text x='16' y='210.0' transform='rotate(-90 16,210.0)' font-size='12' font-family='Segoe UI, Arial'>Count</text>
+<rect x='76.8' y='40.0' width='40.5' height='340.0' fill='#4f46e5'/>
+<text x='97.0' y='392' transform='rotate(45 97.0,392)' font-size='10' font-family='Segoe UI, Arial'>Whitefield</text>
+<rect x='130.8' y='130.8' width='40.5' height='249.2' fill='#4f46e5'/>
+<text x='151.0' y='392' transform='rotate(45 151.0,392)' font-size='10' font-family='Segoe UI, Arial'>Sarjapur Road</text>
+<rect x='184.8' y='193.1' width='40.5' height='186.9' fill='#4f46e5'/>
+<text x='205.0' y='392' transform='rotate(45 205.0,392)' font-size='10' font-family='Segoe UI, Arial'>Electronic City</text>
+<rect x='238.8' y='219.7' width='40.5' height='160.3' fill='#4f46e5'/>
+<text x='259.0' y='392' transform='rotate(45 259.0,392)' font-size='10' font-family='Segoe UI, Arial'>Kanakpura Road</text>
+<rect x='292.8' y='229.5' width='40.5' height='150.5' fill='#4f46e5'/>
+<text x='313.0' y='392' transform='rotate(45 313.0,392)' font-size='10' font-family='Segoe UI, Arial'>Thanisandra</text>
+<rect x='346.8' y='245.7' width='40.5' height='134.3' fill='#4f46e5'/>
+<text x='367.0' y='392' transform='rotate(45 367.0,392)' font-size='10' font-family='Segoe UI, Arial'>Yelahanka</text>
+<rect x='400.8' y='270.3' width='40.5' height='109.7' fill='#4f46e5'/>
+<text x='421.0' y='392' transform='rotate(45 421.0,392)' font-size='10' font-family='Segoe UI, Arial'>Marathahalli</text>
+<rect x='454.8' y='275.5' width='40.5' height='104.5' fill='#4f46e5'/>
+<text x='475.0' y='392' transform='rotate(45 475.0,392)' font-size='10' font-family='Segoe UI, Arial'>Hebbal</text>
+<rect x='508.8' y='276.8' width='40.5' height='103.2' fill='#4f46e5'/>
+<text x='529.0' y='392' transform='rotate(45 529.0,392)' font-size='10' font-family='Segoe UI, Arial'>Raja Rajeshwari Nagar</text>
+<rect x='562.8' y='278.1' width='40.5' height='101.9' fill='#4f46e5'/>
+<text x='583.0' y='392' transform='rotate(45 583.0,392)' font-size='10' font-family='Segoe UI, Arial'>Uttarahalli</text>
+<rect x='616.8' y='283.3' width='40.5' height='96.7' fill='#4f46e5'/>
+<text x='637.0' y='392' transform='rotate(45 637.0,392)' font-size='10' font-family='Segoe UI, Arial'>Hennur Road</text>
+<rect x='670.8' y='284.0' width='40.5' height='96.0' fill='#4f46e5'/>
+<text x='691.0' y='392' transform='rotate(45 691.0,392)' font-size='10' font-family='Segoe UI, Arial'>Bannerghatta Road</text>
+<rect x='724.8' y='292.4' width='40.5' height='87.6' fill='#4f46e5'/>
+<text x='745.0' y='392' transform='rotate(45 745.0,392)' font-size='10' font-family='Segoe UI, Arial'>7th Phase JP Nagar</text>
+<rect x='778.8' y='296.9' width='40.5' height='83.1' fill='#4f46e5'/>
+<text x='799.0' y='392' transform='rotate(45 799.0,392)' font-size='10' font-family='Segoe UI, Arial'>Electronic City Phase II</text>
+<rect x='832.8' y='311.9' width='40.5' height='68.1' fill='#4f46e5'/>
+<text x='853.0' y='392' transform='rotate(45 853.0,392)' font-size='10' font-family='Segoe UI, Arial'>Rajaji Nagar</text>
+</svg>

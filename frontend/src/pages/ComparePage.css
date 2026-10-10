@@ -1,0 +1,308 @@
+/* Compare layout — product skin via .hpi-est--product (EstimatePage.css) */
+
+.hpi-est-compare-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 980px) {
+  .hpi-est-compare-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.hpi-est-compare-panel {
+  min-width: 0;
+}
+
+.hpi-est-compare-tag {
+  margin: 0 0 0.85rem;
+  font-family: var(--ed-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+}
+
+/* PropertyFormFields has no Estimate sections — restore readable spacing */
+.hpi-est--product.hpi-cmp .hpi-est-compare-panel .hpi-est-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hpi-est--product.hpi-cmp .hpi-est-compare-panel .hpi-est-field {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.hpi-est--product.hpi-cmp .hpi-est-compare-panel .hpi-est-field-row {
+  display: grid;
+  gap: 1rem;
+  border: 0;
+}
+
+@media (min-width: 560px) {
+  .hpi-est--product.hpi-cmp .hpi-est-compare-panel .hpi-est-field-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hpi-est--product.hpi-cmp .hpi-est-compare-panel .hpi-est-field-row .hpi-est-field {
+    padding: 0;
+    border-left: 0;
+  }
+}
+
+.hpi-est-compare-actions {
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-est--product.hpi-cmp .hpi-est-compare-actions .hpi-est-submit {
+  min-width: min(100%, 16rem);
+}
+
+.hpi-est-compare-results {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-est--product.hpi-cmp .hpi-est-compare-results .hpi-est-col-label {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-est-compare-cards {
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 760px) {
+  .hpi-est-compare-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+/* Result panels — editorial columns, not KPI cards */
+.hpi-cmp-result {
+  padding: 1.25rem 0 1.5rem;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+@media (min-width: 760px) {
+  .hpi-cmp-result {
+    border-bottom: 0;
+    padding: 0 1.5rem 0 0;
+    border-right: 1px solid var(--ed-line);
+  }
+
+  .hpi-cmp-result:last-child {
+    padding: 0 0 0 1.5rem;
+    border-right: 0;
+  }
+}
+
+.hpi-cmp-result.is-higher .hpi-est-price {
+  color: var(--ed-accent);
+}
+
+.hpi-cmp-result-place {
+  margin: 0.15rem 0 0.3rem;
+  font-family: var(--ed-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hpi-cmp-result-meta {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ed-mute);
+}
+
+.hpi-est--product.hpi-cmp .hpi-cmp-result .hpi-est-price {
+  margin: 0.2rem 0 0;
+  font-size: clamp(2.45rem, 5vw, 3.35rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hpi-cmp-ppsft {
+  margin: 0.65rem 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ed-ink);
+}
+
+.hpi-est--product.hpi-cmp .hpi-cmp-result .hpi-est-inr {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ed-mute);
+}
+
+.hpi-cmp-range {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-est--product.hpi-cmp .hpi-cmp-range .hpi-est-range {
+  margin: 0.25rem 0 0;
+  font-size: 0.98rem;
+  color: var(--ed-ink);
+}
+
+/* Summary / differences */
+.hpi-est-compare-summary {
+  margin-top: 1.75rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-cmp-summary-h {
+  margin: 0 0 0.55rem;
+  font-family: var(--ed-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+}
+
+.hpi-cmp-summary-lead {
+  margin: 0 0 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ed-ink);
+}
+
+.hpi-cmp-diff-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.hpi-cmp-diff-row {
+  display: grid;
+  gap: 0.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+.hpi-cmp-diff-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 560px) {
+  .hpi-cmp-diff-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: baseline;
+    gap: 1rem;
+  }
+}
+
+.hpi-cmp-diff-row dt {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-cmp-diff-row dd {
+  margin: 0;
+  font-family: var(--ed-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+}
+
+.hpi-cmp-diff-note {
+  display: block;
+  margin-top: 0.2rem;
+  font-family: var(--ed-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ed-mute);
+}
+
+.hpi-cmp-summary-note {
+  margin: 1.1rem 0 0;
+  max-width: 36rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ed-faint);
+}
+
+.hpi-est-compare-partial {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--ed-mute);
+}
+
+.hpi-est-compare-partial a {
+  color: var(--ed-accent);
+  font-weight: 600;
+}
+
+.hpi-est-compare-retry {
+  margin-top: 0.75rem;
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ed-accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.hpi-est-compare-retry:hover:not(:disabled) {
+  color: var(--ed-accent-hover);
+}
+
+.hpi-est-compare-retry:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.hpi-est-compare-retry:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-est-compare-meta {
+  margin: 0.85rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ed-faint);
+}
+
+.hpi-est--product.hpi-cmp .hpi-est-compare-results .hpi-est-disclaimer {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+}

@@ -1,0 +1,532 @@
+/* About / How it works — product skin via .hpi-est--product */
+
+.hpi-about-section {
+  padding: 2.25rem 0 0.35rem;
+  border-top: 1px solid var(--ed-line);
+  margin-top: 1.75rem;
+}
+
+.hpi-about-section-head {
+  margin-bottom: 1.35rem;
+  max-width: 36rem;
+}
+
+.hpi-about-section-grid {
+  display: grid;
+  gap: 1.35rem 3rem;
+}
+
+@media (min-width: 900px) {
+  .hpi-about-section-grid {
+    grid-template-columns: minmax(11rem, 0.65fr) minmax(0, 1.35fr);
+    align-items: start;
+  }
+}
+
+.hpi-about-index {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-about-heading {
+  margin: 0.4rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.75rem, 3.6vw, 2.55rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  color: var(--ed-ink);
+}
+
+.hpi-about-copy {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--ed-mute);
+}
+
+.hpi-about-copy + .hpi-about-copy {
+  margin-top: 0.85rem;
+}
+
+.hpi-about-copy strong {
+  color: var(--ed-ink);
+  font-weight: 600;
+}
+
+.hpi-about-subheading {
+  margin: 1.5rem 0 0.55rem;
+  font-family: var(--ed-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+}
+
+/* Process sequence */
+.hpi-about-process {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.hpi-about-process-item {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr);
+  gap: 0.85rem 1.15rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+.hpi-about-process-n {
+  font-family: var(--ed-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ed-faint);
+  letter-spacing: 0.04em;
+}
+
+.hpi-about-process-title {
+  margin: 0 0 0.35rem;
+  font-family: var(--ed-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ed-ink);
+}
+
+/* Meta / metrics */
+.hpi-about-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  margin-top: 1.35rem;
+}
+
+.hpi-about-meta-item span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-about-meta-item strong {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--ed-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+}
+
+.hpi-about-meta-rule {
+  font-size: 1.05rem !important;
+  max-width: 16rem;
+  line-height: 1.35;
+}
+
+.hpi-about-features-lead,
+.hpi-about-metrics-lead {
+  margin-top: 1.35rem !important;
+}
+
+.hpi-about-features {
+  list-style: none;
+  margin: 0.65rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .hpi-about-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hpi-about-feature {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ed-ink);
+}
+
+@media (min-width: 640px) {
+  .hpi-about-feature:nth-child(odd) {
+    padding-right: 1.25rem;
+  }
+
+  .hpi-about-feature:nth-child(even) {
+    padding-left: 1.25rem;
+    border-left: 1px solid var(--ed-line);
+  }
+}
+
+.hpi-about-metrics {
+  display: grid;
+  gap: 0;
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--ed-line);
+  border-bottom: 1px solid var(--ed-line);
+}
+
+@media (min-width: 720px) {
+  .hpi-about-metrics {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hpi-about-metric {
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+@media (min-width: 720px) {
+  .hpi-about-metric {
+    padding: 1.25rem 1.25rem 1.25rem 0;
+    border-bottom: 0;
+    border-right: 1px solid var(--ed-line);
+  }
+
+  .hpi-about-metric:not(:first-child) {
+    padding-left: 1.25rem;
+  }
+
+  .hpi-about-metric:last-child {
+    border-right: 0;
+  }
+}
+
+.hpi-about-metric span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-about-metric strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.55rem, 2.8vw, 2.05rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-about-metric em {
+  display: block;
+  margin-top: 0.3rem;
+  font-style: normal;
+  font-size: 0.82rem;
+  color: var(--ed-mute);
+}
+
+/* Comparison */
+.hpi-about-compare {
+  margin-top: 0.5rem;
+}
+
+.hpi-about-compare-label {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-about-compare-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.95rem;
+}
+
+.hpi-about-compare-row.is-selected .hpi-about-compare-name {
+  color: var(--ed-accent);
+  font-weight: 700;
+}
+
+.hpi-about-compare-name {
+  color: var(--ed-mute);
+  font-weight: 500;
+}
+
+.hpi-about-compare-value {
+  color: var(--ed-ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-about-compare-note {
+  margin: 0.85rem 0 0;
+  max-width: 36rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ed-faint);
+}
+
+/* Evaluation */
+.hpi-about-evaluation {
+  margin-top: 0.35rem;
+}
+
+.hpi-about-evaluation-meta {
+  margin-top: 0.35rem !important;
+  font-size: 0.9rem !important;
+}
+
+.hpi-about-evaluation-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 0.9rem 0 0.35rem;
+  border-top: 1px solid var(--ed-line);
+  border-bottom: 1px solid var(--ed-line);
+}
+
+.hpi-about-evaluation-metrics .hpi-about-metric {
+  padding: 1rem 0.75rem 1rem 0;
+}
+
+.hpi-about-evaluation-metrics .hpi-about-metric:not(:first-child) {
+  padding-left: 0.85rem;
+  border-left: 1px solid var(--ed-line);
+}
+
+.hpi-about-evaluation-disclaimer {
+  margin-top: 0.85rem !important;
+  font-size: 0.84rem !important;
+  color: var(--ed-faint) !important;
+}
+
+.hpi-about-evaluation-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.hpi-about-retry {
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ed-accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.hpi-about-retry:hover {
+  color: var(--ed-accent-hover);
+}
+
+.hpi-about-retry:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-about-scatter-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 0.85rem;
+}
+
+.hpi-about-scatter {
+  display: block;
+  width: 100%;
+  min-width: 280px;
+  height: auto;
+}
+
+.hpi-about-scatter-frame {
+  fill: color-mix(in srgb, var(--ed-accent) 4%, var(--ed-surface));
+  stroke: var(--ed-line);
+  stroke-width: 1;
+}
+
+.hpi-about-scatter-grid {
+  stroke: var(--ed-line);
+  stroke-width: 1;
+}
+
+.hpi-about-scatter-tick {
+  fill: var(--ed-faint);
+  font-size: 10px;
+  font-family: var(--ed-sans);
+}
+
+.hpi-about-scatter-axis {
+  fill: var(--ed-mute);
+  font-size: 11px;
+  font-family: var(--ed-sans);
+}
+
+.hpi-about-scatter-ideal {
+  stroke: var(--ed-accent);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+}
+
+.hpi-about-scatter-ideal-label {
+  fill: var(--ed-accent);
+  font-size: 10px;
+  font-family: var(--ed-sans);
+}
+
+.hpi-about-scatter-point {
+  fill: color-mix(in srgb, var(--ed-accent) 45%, transparent);
+  stroke: none;
+}
+
+@media (max-width: 640px) {
+  .hpi-about-evaluation-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .hpi-about-evaluation-metrics .hpi-about-metric:not(:first-child) {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid var(--ed-line);
+  }
+}
+
+/* Feature influence */
+.hpi-about-why-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+  max-width: 28rem;
+}
+
+.hpi-about-why-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ed-ink);
+}
+
+.hpi-about-why-share {
+  color: var(--ed-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-about-why-track {
+  margin-top: 0.35rem;
+  height: 0.28rem;
+  background: var(--ed-bg);
+  border: 1px solid var(--ed-line);
+  overflow: hidden;
+}
+
+.hpi-about-why-fill {
+  display: block;
+  height: 100%;
+  background: var(--ed-accent);
+}
+
+.hpi-about-why-note {
+  margin: 0.9rem 0 0;
+  max-width: 34rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--ed-faint);
+}
+
+/* Limitations */
+.hpi-about-limits {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hpi-about-limits li {
+  position: relative;
+  padding: 0.85rem 0 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ed-mute);
+}
+
+.hpi-about-limits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.3rem;
+  width: 0.4rem;
+  height: 1px;
+  background: var(--ed-accent);
+}
+
+/* CTA */
+.hpi-about-cta {
+  margin-top: 2.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--ed-line);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.hpi-about-cta-lead {
+  margin: 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.45rem, 2.8vw, 1.85rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+}
+
+.hpi-about-cta-btn {
+  text-decoration: none;
+}
+
+.hpi-about-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ed-mute);
+}
+
+.hpi-about-error {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ed-danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hpi-about-retry {
+    transition: none !important;
+  }
+}

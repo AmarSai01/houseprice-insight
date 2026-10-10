@@ -1,0 +1,471 @@
+/* Market page — product skin via .hpi-est--product (EstimatePage.css) */
+
+.hpi-mkt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hpi-mkt-label {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-mkt-section {
+  padding: 2rem 0 0.35rem;
+  border-top: 1px solid var(--ed-line);
+  margin-top: 1.75rem;
+}
+
+.hpi-mkt-section:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.hpi-mkt-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hpi-mkt-section-title {
+  margin: 0.35rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.75rem, 3.8vw, 2.65rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--ed-ink);
+}
+
+.hpi-mkt-section-note {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+/* Overview rows */
+.hpi-mkt-overview {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.hpi-mkt-overview-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) auto;
+  gap: 0.35rem 1.25rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 1.05rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--ed-line);
+  background: transparent;
+  text-align: left;
+  font-family: var(--ed-sans);
+  color: inherit;
+  cursor: pointer;
+}
+
+.hpi-mkt-overview-row:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-mkt-overview-row.is-active .hpi-mkt-overview-name {
+  color: var(--ed-accent);
+}
+
+.hpi-mkt-overview-name {
+  font-family: var(--ed-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hpi-mkt-overview-price {
+  justify-self: end;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-mkt-overview-price small {
+  margin-left: 0.3rem;
+  font-family: var(--ed-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ed-faint);
+}
+
+.hpi-mkt-overview-yoy {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.75rem;
+}
+
+.hpi-mkt-overview-yoy-label {
+  font-size: 0.82rem;
+  color: var(--ed-faint);
+}
+
+.hpi-mkt-overview-yoy strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-mkt-overview-yoy strong.is-up {
+  color: var(--ed-accent);
+}
+
+.hpi-mkt-overview-yoy strong.is-down {
+  color: var(--ed-danger);
+}
+
+.hpi-mkt-relative {
+  grid-column: 1 / -1;
+  display: block;
+  height: 0.28rem;
+  margin-top: 0.15rem;
+  background: var(--ed-bg);
+  border: 1px solid var(--ed-line);
+  overflow: hidden;
+}
+
+.hpi-mkt-relative-fill {
+  display: block;
+  height: 100%;
+  background: var(--ed-accent);
+}
+
+@media (min-width: 720px) {
+  .hpi-mkt-overview-row {
+    grid-template-columns: minmax(0, 1.2fr) auto minmax(9rem, 0.8fr);
+    align-items: center;
+  }
+
+  .hpi-mkt-overview-yoy {
+    grid-column: auto;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .hpi-mkt-relative {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Locality chips */
+.hpi-mkt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+.hpi-mkt-chip {
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: 0.45rem 0;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ed-faint);
+  cursor: pointer;
+}
+
+.hpi-mkt-chip:hover {
+  color: var(--ed-ink);
+}
+
+.hpi-mkt-chip.is-active {
+  color: var(--ed-accent);
+  border-bottom-color: var(--ed-accent);
+}
+
+.hpi-mkt-chip:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+/* Selected metrics */
+.hpi-mkt-metrics {
+  display: grid;
+  gap: 0;
+}
+
+@media (min-width: 720px) {
+  .hpi-mkt-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.hpi-mkt-metric {
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+@media (min-width: 720px) {
+  .hpi-mkt-metric {
+    padding: 0 1.35rem 0 0;
+    border-bottom: 0;
+    border-right: 1px solid var(--ed-line);
+  }
+
+  .hpi-mkt-metric:not(:first-child) {
+    padding-left: 1.35rem;
+  }
+
+  .hpi-mkt-metric:last-child {
+    border-right: 0;
+    padding-right: 0;
+  }
+}
+
+.hpi-mkt-metric-value {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ed-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-mkt-metric-value.hpi-mkt-serif {
+  font-family: var(--ed-serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.45rem);
+}
+
+.hpi-mkt-metric-value.is-accent {
+  color: var(--ed-accent);
+}
+
+.hpi-mkt-metric-value.is-down {
+  color: var(--ed-danger);
+}
+
+.hpi-mkt-metric-text {
+  margin: 0.45rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ed-ink);
+}
+
+.hpi-mkt-metric-sub {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--ed-faint);
+}
+
+/* Chart */
+.hpi-mkt-chart-wrap {
+  min-height: 12rem;
+}
+
+.hpi-mkt-chart-block {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.hpi-mkt-chart-metric {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-mkt-chart {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  display: block;
+}
+
+.hpi-mkt-chart-grid {
+  stroke: var(--ed-line);
+  stroke-width: 1;
+}
+
+.hpi-mkt-chart-axis {
+  stroke: var(--ed-line);
+  stroke-width: 1.25;
+}
+
+.hpi-mkt-chart-line {
+  stroke: var(--ed-accent);
+  stroke-width: 1.8;
+}
+
+.hpi-mkt-chart-dot {
+  fill: var(--ed-accent);
+}
+
+.hpi-mkt-chart-tick {
+  fill: var(--ed-faint);
+  font-family: var(--ed-sans);
+  font-size: 11px;
+}
+
+.hpi-mkt-chart-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: var(--ed-faint);
+}
+
+/* Status / errors */
+.hpi-mkt-status {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 10rem;
+  font-size: 0.95rem;
+  color: var(--ed-mute);
+}
+
+.hpi-mkt-status-compact {
+  min-height: 3.5rem;
+}
+
+.hpi-mkt-error {
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ed-danger);
+}
+
+.hpi-mkt-error p {
+  margin: 0;
+}
+
+.hpi-mkt-retry {
+  margin-top: 0.65rem;
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ed-accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.hpi-mkt-retry:hover {
+  color: var(--ed-accent-hover);
+}
+
+.hpi-mkt-retry:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-mkt-empty {
+  margin: 0;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+  color: var(--ed-mute);
+}
+
+/* Coverage */
+.hpi-mkt-coverage {
+  display: grid;
+  gap: 1.35rem;
+}
+
+@media (min-width: 720px) {
+  .hpi-mkt-coverage {
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.hpi-mkt-coverage-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.35rem 2rem;
+}
+
+.hpi-mkt-coverage-stat strong {
+  display: block;
+  margin-top: 0.3rem;
+  font-family: var(--ed-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ed-ink);
+}
+
+.hpi-mkt-coverage-period {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.hpi-mkt-coverage-copy {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ed-mute);
+}
+
+.hpi-mkt-disclaimer {
+  margin: 2rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--ed-line);
+  max-width: 36rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--ed-faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hpi-mkt-chip,
+  .hpi-mkt-overview-row {
+    transition: none !important;
+  }
+}

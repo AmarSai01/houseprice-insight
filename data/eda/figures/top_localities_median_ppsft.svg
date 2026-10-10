@@ -1,0 +1,31 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='900' height='500'>
+<rect width='100%' height='100%' fill='white'/>
+<text x='450.0' y='24' text-anchor='middle' font-size='16' font-family='Segoe UI, Arial'>Top localities by median INR/sqft (n&gt;=30)</text>
+<line x1='70' y1='40' x2='70' y2='380' stroke='#333'/>
+<line x1='70' y1='380' x2='880' y2='380' stroke='#333'/>
+<text x='16' y='210.0' transform='rotate(-90 16,210.0)' font-size='12' font-family='Segoe UI, Arial'>Median INR/sqft</text>
+<rect x='78.4' y='40.0' width='50.6' height='340.0' fill='#4f46e5'/>
+<text x='103.8' y='392' transform='rotate(45 103.8,392)' font-size='10' font-family='Segoe UI, Arial'>Rajaji Nagar</text>
+<rect x='145.9' y='75.4' width='50.6' height='304.6' fill='#4f46e5'/>
+<text x='171.2' y='392' transform='rotate(45 171.2,392)' font-size='10' font-family='Segoe UI, Arial'>Malleshwaram</text>
+<rect x='213.4' y='97.9' width='50.6' height='282.1' fill='#4f46e5'/>
+<text x='238.8' y='392' transform='rotate(45 238.8,392)' font-size='10' font-family='Segoe UI, Arial'>Indira Nagar</text>
+<rect x='280.9' y='137.2' width='50.6' height='242.8' fill='#4f46e5'/>
+<text x='306.2' y='392' transform='rotate(45 306.2,392)' font-size='10' font-family='Segoe UI, Arial'>Frazer Town</text>
+<rect x='348.4' y='141.0' width='50.6' height='239.0' fill='#4f46e5'/>
+<text x='373.8' y='392' transform='rotate(45 373.8,392)' font-size='10' font-family='Segoe UI, Arial'>Basavangudi</text>
+<rect x='415.9' y='148.2' width='50.6' height='231.8' fill='#4f46e5'/>
+<text x='441.2' y='392' transform='rotate(45 441.2,392)' font-size='10' font-family='Segoe UI, Arial'>Hosakerehalli</text>
+<rect x='483.4' y='155.1' width='50.6' height='224.9' fill='#4f46e5'/>
+<text x='508.8' y='392' transform='rotate(45 508.8,392)' font-size='10' font-family='Segoe UI, Arial'>Hebbal Kempapura</text>
+<rect x='550.9' y='159.2' width='50.6' height='220.8' fill='#4f46e5'/>
+<text x='576.2' y='392' transform='rotate(45 576.2,392)' font-size='10' font-family='Segoe UI, Arial'>Koramangala</text>
+<rect x='618.4' y='183.5' width='50.6' height='196.5' fill='#4f46e5'/>
+<text x='643.8' y='392' transform='rotate(45 643.8,392)' font-size='10' font-family='Segoe UI, Arial'>Kumaraswami Layout</text>
+<rect x='685.9' y='191.7' width='50.6' height='188.3' fill='#4f46e5'/>
+<text x='711.2' y='392' transform='rotate(45 711.2,392)' font-size='10' font-family='Segoe UI, Arial'>R.T. Nagar</text>
+<rect x='753.4' y='198.7' width='50.6' height='181.3' fill='#4f46e5'/>
+<text x='778.8' y='392' transform='rotate(45 778.8,392)' font-size='10' font-family='Segoe UI, Arial'>Kundalahalli</text>
+<rect x='820.9' y='200.9' width='50.6' height='179.1' fill='#4f46e5'/>
+<text x='846.2' y='392' transform='rotate(45 846.2,392)' font-size='10' font-family='Segoe UI, Arial'>Thigalarapalya</text>
+</svg>

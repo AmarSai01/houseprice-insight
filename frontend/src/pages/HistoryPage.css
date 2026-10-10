@@ -1,0 +1,241 @@
+/* History — product skin via .hpi-est--product (EstimatePage.css) */
+
+.hpi-hist-signed {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ed-mute);
+}
+
+.hpi-hist-signed strong {
+  color: var(--ed-ink);
+  font-weight: 600;
+}
+
+.hpi-hist-status {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 1.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ed-mute);
+}
+
+.hpi-hist-error {
+  margin: 1.5rem 0 0;
+  max-width: 34rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--ed-line);
+  border-bottom: 1px solid var(--ed-line);
+}
+
+.hpi-hist-error p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ed-danger);
+}
+
+.hpi-hist-retry {
+  margin-top: 0.65rem;
+  border: 0;
+  background: transparent;
+  padding: 0.4rem 0;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ed-accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.hpi-hist-retry:hover {
+  color: var(--ed-accent-hover);
+}
+
+.hpi-hist-retry:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-hist-gate,
+.hpi-hist-empty {
+  margin-top: 1.5rem;
+  max-width: 32rem;
+  padding: 1.75rem 0 0;
+  border-top: 1px solid var(--ed-line);
+}
+
+.hpi-hist-empty-title {
+  margin: 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.75rem, 3.5vw, 2.45rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--ed-ink);
+}
+
+.hpi-hist-empty-copy {
+  margin: 0.75rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ed-mute);
+}
+
+.hpi-hist-empty-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.35rem;
+  margin-top: 1.5rem;
+}
+
+.hpi-hist-cta-btn {
+  text-decoration: none;
+}
+
+.hpi-hist-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  font-family: var(--ed-sans);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--ed-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+.hpi-hist-link:hover {
+  color: var(--ed-accent-hover);
+}
+
+.hpi-hist-link:focus-visible {
+  outline: 2px solid var(--ed-accent);
+  outline-offset: 3px;
+}
+
+.hpi-hist-list-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: 0.5rem 0 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ed-line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-hist-list-label span {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--ed-mute);
+}
+
+/* Editorial archive list — not dashboard cards */
+.hpi-hist-archive {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hpi-hist-row {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--ed-line);
+}
+
+@media (min-width: 760px) {
+  .hpi-hist-row {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+    gap: 2rem;
+    align-items: start;
+    padding: 1.65rem 0;
+  }
+}
+
+.hpi-hist-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-hist-location {
+  margin: 0.25rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(1.35rem, 2.6vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--ed-ink);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.hpi-hist-meta {
+  margin: 0.55rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ed-mute);
+}
+
+.hpi-hist-saved {
+  margin: 0.75rem 0 0;
+  font-size: 0.84rem;
+  color: var(--ed-faint);
+}
+
+.hpi-hist-value-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@media (min-width: 760px) {
+  .hpi-hist-value-block {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.hpi-hist-value-label {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ed-faint);
+}
+
+.hpi-hist-value {
+  margin: 0.15rem 0 0;
+  font-family: var(--ed-serif);
+  font-size: clamp(2.15rem, 4vw, 2.85rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--ed-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.hpi-hist-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.25rem;
+  margin-top: 1.75rem;
+  padding-top: 0.25rem;
+}

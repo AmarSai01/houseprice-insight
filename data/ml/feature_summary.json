@@ -1,0 +1,45 @@
+{
+  "target": {
+    "name": "price",
+    "unit": "INR_lakhs"
+  },
+  "input_features": [
+    "area_type",
+    "location",
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony",
+    "is_ready_to_move"
+  ],
+  "raw_columns_used": [
+    "area_type",
+    "location",
+    "availability",
+    "total_sqft",
+    "bhk",
+    "bath",
+    "balcony"
+  ],
+  "preprocessing": {
+    "numeric": [
+      "total_sqft",
+      "bhk",
+      "bath",
+      "balcony",
+      "is_ready_to_move"
+    ],
+    "categorical": [
+      "area_type",
+      "location"
+    ],
+    "location_rare_min_count": 10,
+    "location_unknown_handling": "OneHotEncoder(handle_unknown='ignore')",
+    "balcony_imputation": "median",
+    "availability_handling": "binary is_ready_to_move"
+  },
+  "leakage_exclusions": [
+    "price_per_sqft"
+  ],
+  "transformed_feature_count": 218
+}
