@@ -65,7 +65,8 @@ Binds to `0.0.0.0`. FastAPI startup (`init_db`, model load) is unchanged.
 Local uvicorn setup above is unchanged. For Vercel, use a **separate** Vercel project with:
 
 - **Root Directory:** repository root (`.`), not `backend/`
-- **Entrypoint:** repository-root `index.py` (configured in root `pyproject.toml` as `index:app`)
+- **Entrypoint:** `backend.main:app` (root `pyproject.toml`). `backend/__init__.py` adds `backend/` to `sys.path` so existing flat imports keep working.
+- **Database:** `DATABASE_URL` is still required before DB use; engine creation is lazy so the ASGI module can import on Vercel.
 - **Runtime requirements:** root `requirements.txt` (pytest omitted)
 - **Bundle filters:** root `.vercelignore` (excludes `frontend/`, tests, raw/EDA data)
 
