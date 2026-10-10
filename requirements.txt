@@ -1,0 +1,17 @@
+# Runtime dependencies for the Vercel API project (repository root).
+# Local backend development continues to use backend/requirements.txt
+# (includes pytest). Keep versions aligned when upgrading.
+
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+psycopg[binary]==3.3.6
+pydantic[email]==2.10.6
+python-jose[cryptography]==3.3.0
+bcrypt==4.3.0
+python-multipart==0.0.20
+pandas==2.2.3
+numpy==2.1.3
+scikit-learn==1.6.1
+joblib==1.4.2
+httpx==0.28.1

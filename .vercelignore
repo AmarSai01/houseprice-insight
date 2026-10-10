@@ -1,0 +1,39 @@
+# Frontend is a separate Vercel project (Root Directory = frontend).
+frontend/
+
+# Local environments and caches
+backend/.venv/
+backend/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/node_modules/
+**/.git/
+
+# Secrets / local-only
+**/.env
+**/.env.*
+!**/.env.example
+**/.local/
+backend/house_prediction.db
+**/*.db
+
+# Tests and non-runtime tooling (not needed in the API function bundle)
+backend/tests/
+backend/check_users.py
+backend/create_admin.py
+backend/delete_pkl_files.py
+backend/reset_db.py
+
+# EDA / raw inputs not required at API runtime (processed + ml artifacts kept)
+data/eda/
+data/raw/
+data/reports/
+data/audit_datasets.py
+data/clean_datasets.py
+data/house_data.csv
+
+# Docs (optional in bundle)
+**/*.md
+!backend/README.md
