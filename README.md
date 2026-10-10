@@ -28,31 +28,29 @@ This is a model-based estimator for learning and portfolio use. It is **not** a 
 
 ```
 project/
+├── api/
+│   └── index.py                # Vercel FastAPI entry (re-exports backend app)
+├── vercel.json                 # API project function settings
+├── .vercelignore               # Keep API bundle lean (excludes frontend/)
+├── requirements.txt            # Vercel API runtime deps (no pytest)
+├── pyproject.toml              # tool.vercel.entrypoint = api.index:app
 ├── backend/
-│   ├── main.py                 # FastAPI entry point
-│   ├── database.py             # Database configuration
-│   ├── models.py               # SQLAlchemy models
-│   ├── auth.py                 # Auth utilities
-│   ├── requirements.txt        # Python dependencies
-│   ├── create_admin.py         # Optional admin user script
-│   ├── .venv/                  # Recommended Python 3.13 virtualenv
+│   ├── main.py                 # FastAPI app (local uvicorn entry)
+│   ├── run_production.py       # Long-lived uvicorn production entry
+│   ├── requirements.txt        # Local/dev deps (includes pytest)
 │   ├── routes/
-│   │   ├── auth.py
-│   │   ├── predict.py
-│   │   └── admin.py            # API-only admin endpoints (no admin UI)
 │   └── ml/
-│       ├── train_model.py
-│       ├── model_service.py
-│       ├── transformers.py
 │       ├── house_price_model.pkl
 │       └── model_metadata.json
 ├── frontend/
+│   ├── vercel.json             # SPA rewrites (separate Vercel project)
 │   ├── src/
 │   └── package.json
 └── data/
-    ├── processed/              # Cleaned property + market datasets
+    ├── processed/              # Runtime datasets (required on API deploy)
+    ├── ml/                     # Explanation + evaluation artifacts
     ├── eda/
-    └── ml/
+    └── raw/
 ```
 
 See `backend/README.md` for prediction request/response details and tests.
@@ -138,7 +136,36 @@ The frontend uses React Router `BrowserRouter`. Static hosts must rewrite unknow
 
 Example: a direct visit to `https://production-domain.example/market` must serve `index.html`; React Router then renders `/market`.
 
-Provider-specific rewrite files are not included yet — configure them when a host is selected. See `frontend/README.md`.
+`frontend/vercel.json` already configures the SPA rewrite. See `frontend/README.md`.
+
+## Deploy on Vercel (two projects, one repo)
+
+Use **two** Vercel projects against the same GitHub repository. Do not put FastAPI and the React SPA in one project (the SPA rewrite would fight API routes).
+
+### A) Frontend project
+
+| Setting | Value |
+|---|---|
+| Root Directory | `frontend` |
+| Framework | Vite |
+| Env | `VITE_API_URL` = public API origin; `APP_ENV=production` recommended |
+
+Uses existing `frontend/vercel.json`.
+
+### B) Backend (API) project
+
+| Setting | Value |
+|---|---|
+| Root Directory | `.` (repository root) |
+| Entry | `api/index.py` → `api.index:app` (see `pyproject.toml`) |
+
+**Required env vars (Production):** `APP_ENV=production`, `SECRET_KEY`, `CORS_ORIGINS` (your Vercel frontend origin), `DATABASE_URL` (`postgresql+psycopg://...` to hosted Postgres). Optional: `FRONTEND_BASE_URL`, SMTP settings.
+
+**Included at runtime:** `backend/ml/house_price_model.pkl`, processed CSVs, and `data/ml` explanation/evaluation artifacts (see `.vercelignore`).
+
+**Not on Vercel:** PostgreSQL itself — use Neon, Supabase, RDS, etc. Local `python -m run_production` remains the long-lived alternative.
+
+**Hobby note:** Python bundles are capped at ~500 MB uncompressed. This app’s ML stack + ~40 MB model is expected to fit but is tight; if the deploy fails on size, enable Large Functions (Fluid) or host the API on Railway/Render/Fly instead.
 
 ## Usage
 

@@ -60,6 +60,19 @@ Equivalent: `python run_production.py`
 
 Binds to `0.0.0.0`. FastAPI startup (`init_db`, model load) is unchanged.
 
+## Vercel (serverless FastAPI)
+
+Local uvicorn setup above is unchanged. For Vercel, use a **separate** Vercel project with:
+
+- **Root Directory:** repository root (`.`), not `backend/`
+- **Entrypoint:** `api/index.py` (configured in root `pyproject.toml` as `api.index:app`)
+- **Runtime requirements:** root `requirements.txt` (pytest omitted)
+- **Bundle filters:** root `.vercelignore` (excludes `frontend/`, tests, raw/EDA data)
+
+Set the same production env vars as above (`APP_ENV`, `SECRET_KEY`, `CORS_ORIGINS`, `DATABASE_URL`). Point `CORS_ORIGINS` at the frontend Vercel URL.
+
+Cold starts load the Random Forest pickle and CSV services into memory (Hobby max 2 GB / 60s function duration configured in root `vercel.json`). Admin retrain may exceed serverless time limits; prefer running retrain on a long-lived host.
+
 ## Prediction API
 
 ### `POST /api/predict`

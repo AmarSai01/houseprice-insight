@@ -1,0 +1,11 @@
+# Vercel FastAPI project metadata (API deploy from repository root).
+# Frontend continues to use Root Directory = frontend/ with frontend/vercel.json.
+
+[project]
+name = "houseprice-insight-api"
+version = "1.1.0"
+description = "HousePrice Insight FastAPI backend"
+requires-python = ">=3.11"
+
+[tool.vercel]
+entrypoint = "api.index:app"
