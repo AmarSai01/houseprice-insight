@@ -28,12 +28,12 @@ This is a model-based estimator for learning and portfolio use. It is **not** a 
 
 ```
 project/
-├── api/
-│   └── index.py                # Vercel FastAPI entry (re-exports backend app)
+├── index.py                    # Vercel FastAPI entry (re-exports backend app)
+├── api/index.py                # Compatibility shim → root index.py
 ├── vercel.json                 # API project function settings
 ├── .vercelignore               # Keep API bundle lean (excludes frontend/)
 ├── requirements.txt            # Vercel API runtime deps (no pytest)
-├── pyproject.toml              # tool.vercel.entrypoint = api.index:app
+├── pyproject.toml              # tool.vercel.entrypoint = index:app
 ├── backend/
 │   ├── main.py                 # FastAPI app (local uvicorn entry)
 │   ├── run_production.py       # Long-lived uvicorn production entry
@@ -157,7 +157,7 @@ Uses existing `frontend/vercel.json`.
 | Setting | Value |
 |---|---|
 | Root Directory | `.` (repository root) |
-| Entry | `api/index.py` → `api.index:app` (see `pyproject.toml`) |
+| Entry | `index.py` → `index:app` (see `pyproject.toml`) |
 
 **Required env vars (Production):** `APP_ENV=production`, `SECRET_KEY`, `CORS_ORIGINS` (your Vercel frontend origin), `DATABASE_URL` (`postgresql+psycopg://...` to hosted Postgres). Optional: `FRONTEND_BASE_URL`, SMTP settings.
 

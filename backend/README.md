@@ -65,7 +65,7 @@ Binds to `0.0.0.0`. FastAPI startup (`init_db`, model load) is unchanged.
 Local uvicorn setup above is unchanged. For Vercel, use a **separate** Vercel project with:
 
 - **Root Directory:** repository root (`.`), not `backend/`
-- **Entrypoint:** `api/index.py` (configured in root `pyproject.toml` as `api.index:app`)
+- **Entrypoint:** repository-root `index.py` (configured in root `pyproject.toml` as `index:app`)
 - **Runtime requirements:** root `requirements.txt` (pytest omitted)
 - **Bundle filters:** root `.vercelignore` (excludes `frontend/`, tests, raw/EDA data)
 
