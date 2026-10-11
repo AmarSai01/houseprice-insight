@@ -2,7 +2,18 @@
 Main FastAPI application.
 """
 
+from __future__ import annotations
+
 import logging
+import sys
+from pathlib import Path
+
+# Vercel loads backend.main via a file/module spec that may not execute
+# backend/__init__.py first. Flat imports (cors_settings, database, routes, ml)
+# require this directory on sys.path — same layout as local `uvicorn main:app`.
+_BACKEND_DIR = Path(__file__).resolve().parent
+if str(_BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(_BACKEND_DIR))
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
