@@ -287,4 +287,4 @@ Tables are created on startup via `create_all` for empty databases.
 
 - `data/raw/bengaluru_house_data_raw.csv` is the 13,320-row Bengaluru housing dataset published by Amitabha Chakraborty on [Kaggle](https://www.kaggle.com/datasets/amitabhajoy/bengaluru-house-price-data). Kaggle lists it as **CC0: Public Domain**. The processed property data and trained prediction model are derived from this dataset.
 - `data/raw/bengaluru_market_history_raw.csv` and `data/house_data.csv` are synthetic illustrative data created for this project; they are not verified historical market records or actual property listings. Do not present the market-history series as observed market facts.
-- No software license is currently included. The CC0 data designation does not license this project's code. Choose and add a separate code license if you want others to reuse the software.
+- Project code is licensed under MIT; see [LICENSE](LICENSE). Dataset terms remain separate from the code license.
