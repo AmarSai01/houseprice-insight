@@ -4,7 +4,7 @@ A full-stack house price estimation app built with FastAPI, React (Vite + Tailwi
 
 **Product direction:** Instant Estimate + Why  
 **Current stage:** Phase 5 — production Bengaluru ML model is served by FastAPI.  
-`POST /api/predict` is guest-capable (auth optional for saving history). Frontend redesign is still pending.
+`POST /api/predict` is guest-capable (authentication is optional for saving history). See the live application for the current frontend experience.
 
 This is a model-based estimator for learning and portfolio use. It is **not** a guaranteed market appraisal or professional valuation service.
 
@@ -15,7 +15,7 @@ This is a model-based estimator for learning and portfolio use. It is **not** a 
 - Prediction history for signed-in users
 - Production RandomForestRegressor pipeline (`house_price_model.pkl`)
 - Model transparency via `GET /api/model-info`
-- OpenAPI docs at `/docs`
+- OpenAPI docs at `/docs` in development only (disabled in production)
 
 ## Tech stack
 
@@ -106,9 +106,7 @@ python -m run_production
 
 Optional admin user (API only; there is no admin UI):
 
-```powershell
-python create_admin.py admin@example.com admin123
-```
+The script accepts an email and password as command-line arguments. Run it only in a trusted environment and use a unique, strong password; avoid shared or example credentials. Command-line arguments may be retained in shell history or visible to local processes.
 
 ### 2. Frontend
 
@@ -283,8 +281,8 @@ Tables are created on startup via `create_all` for empty databases.
 
 - Prefer `backend/.venv` (Python 3.13). An older `backend/venv` may exist from a previous machine and should not be used.
 - Admin accounts can call admin API routes; the frontend always sends users to `/dashboard`.
-- Frontend still uses older form field names; Phase 5 backend API uses the Bengaluru production schema. Frontend redesign is next.
+- Keep the frontend and backend prediction fields aligned when changing the API schema.
 
-## License
+## License and data provenance
 
-Educational / portfolio use.
+No software license is currently included. The repository also does not document the source or reuse terms for the housing datasets and derived model artifacts. Confirm the applicable permissions and add the appropriate attribution and license information before publishing the repository or granting reuse rights.
