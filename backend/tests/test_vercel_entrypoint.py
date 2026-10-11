@@ -169,3 +169,52 @@ def test_legacy_from_main_import_app_path_still_works_locally():
     )
     assert result.returncode == 0, result.stderr
     assert "LOCAL_OK" in result.stdout
+
+
+def test_main_loads_when_package_init_path_setup_is_skipped():
+    """
+    Reproduce Vercel: load backend/main.py as backend.main without running
+    backend/__init__.py path bootstrap. Flat imports must still resolve
+    (cors_settings, database, routes, ml).
+    """
+    script = dedent(
+        """
+        import importlib.util
+        import sys
+        import types
+        from pathlib import Path
+
+        root = Path(r'''%s''')
+        backend = root / "backend"
+        # Repo root only — do not pre-add backend/ (Vercel-like).
+        sys.path = [p for p in sys.path if Path(p).resolve() != backend.resolve()]
+        if str(root) not in sys.path:
+            sys.path.insert(0, str(root))
+
+        # Stub parent package without executing backend/__init__.py
+        pkg = types.ModuleType("backend")
+        pkg.__path__ = [str(backend)]
+        sys.modules["backend"] = pkg
+
+        spec = importlib.util.spec_from_file_location(
+            "backend.main", backend / "main.py"
+        )
+        assert spec and spec.loader
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules["backend.main"] = mod
+        spec.loader.exec_module(mod)
+        assert mod.app.title == "House Price Prediction API"
+        from cors_settings import CORS_ORIGINS  # noqa: F401
+        print("SPEC_LOAD_OK")
+        """
+        % REPO_ROOT
+    )
+    result = _run_isolated(
+        script,
+        {
+            "APP_ENV": "development",
+            "DATABASE_URL": _database_url_for_tests(),
+        },
+    )
+    assert result.returncode == 0, result.stderr + result.stdout
+    assert "SPEC_LOAD_OK" in result.stdout
