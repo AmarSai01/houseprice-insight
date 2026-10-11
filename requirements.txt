@@ -1,6 +1,8 @@
-# Runtime dependencies for the Vercel API project (repository root).
+# Runtime dependency mirror for local/reference installs.
+# Vercel installs from pyproject.toml [project.dependencies] (not this file)
+# when pyproject.toml is present. Keep both lists aligned when upgrading.
 # Local backend development continues to use backend/requirements.txt
-# (includes pytest). Keep versions aligned when upgrading.
+# (includes pytest).
 
 fastapi==0.115.6
 uvicorn[standard]==0.32.1

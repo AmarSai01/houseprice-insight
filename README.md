@@ -159,6 +159,7 @@ Uses existing `frontend/vercel.json`.
 |---|---|
 | Root Directory | `.` (repository root) |
 | Entry | `backend/main.py` → `backend.main:app` (see `pyproject.toml`) |
+| Dependencies | `pyproject.toml` `[project.dependencies]` (Vercel/`uv` install source) |
 
 **Required env vars (Production):** `APP_ENV=production`, `SECRET_KEY`, `CORS_ORIGINS` (your Vercel frontend origin), `DATABASE_URL` (`postgresql+psycopg://...` to hosted Postgres). Optional: `FRONTEND_BASE_URL`, SMTP settings.
 
