@@ -5,6 +5,7 @@
 import {
   AREA_TYPE_OPTIONS,
 } from "../services/propertyForm";
+import { LOCALITY_DATALIST_ID, getLocalityHint } from "./LocalityDatalist";
 
 /**
  * @param {{
@@ -28,6 +29,7 @@ export default function PropertyFormFields({
 }) {
   const fieldId = (name) => `${idPrefix}-${name}`;
   const errorId = (name) => `${idPrefix}-${name}-error`;
+  const hintId = `${idPrefix}-location-hint`;
 
   return (
     <>
@@ -44,9 +46,15 @@ export default function PropertyFormFields({
           placeholder="e.g. Whitefield, Indiranagar, Yelahanka"
           className={inputClass("location")}
           autoComplete="off"
+          list={LOCALITY_DATALIST_ID}
           {...fieldProps("location")}
-          aria-describedby={errors.location ? errorId("location") : undefined}
+          aria-describedby={errors.location ? errorId("location") : hintId}
         />
+        {!errors.location && (
+          <p id={hintId} className="hpi-est-hint" aria-live="polite">
+            {getLocalityHint(form.location)}
+          </p>
+        )}
         {errors.location && (
           <p id={errorId("location")} className="hpi-est-field-error" role="alert">
             {errors.location}
