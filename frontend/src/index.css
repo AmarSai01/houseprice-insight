@@ -1,11 +1,55 @@
 /* UI 2.0 design-system foundation (tokens + optional primitives).
    Page skins keep their local --hp-* / --ed-* until the page redesign pass. */
-@import "./styles/tokens.css";
-@import "./styles/foundation.css";
+@import './styles/tokens.css' layer(base);
+@import './styles/foundation.css' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-hpi-bg: var(--hpi-color-bg);
+  --color-hpi-muted: var(--hpi-color-bg-muted);
+  --color-hpi-surface: var(--hpi-color-surface);
+  --color-hpi-ink: var(--hpi-color-ink);
+  --color-hpi-mute: var(--hpi-color-mute);
+  --color-hpi-faint: var(--hpi-color-faint);
+  --color-hpi-line: var(--hpi-color-line);
+  --color-hpi-accent: var(--hpi-color-accent);
+  --color-hpi-accent-hover: var(--hpi-color-accent-hover);
+  --color-hpi-on-accent: var(--hpi-color-on-accent);
+  --color-hpi-danger: var(--hpi-color-danger);
+  --color-hpi-warning: var(--hpi-color-warning);
+  --color-hpi-success: var(--hpi-color-success);
+
+  --font-display: var(--hpi-font-heading);
+  --font-body: var(--hpi-font-body);
+
+  --container-content: var(--hpi-max-content);
+  --container-prose: var(--hpi-max-prose);
+
+  --radius-hpi: var(--hpi-radius-md);
+
+  --spacing-hpi-pad: var(--hpi-pad-page);
+
+  --transition-duration-hpi: var(--hpi-duration-base);
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   font-family: var(--hpi-font-ui), "Source Sans 3", ui-sans-serif, system-ui,

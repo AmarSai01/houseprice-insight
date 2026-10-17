@@ -8,7 +8,7 @@ const LoadingSpinner = ({ size = 'md' }) => {
   return (
     <div className="flex justify-center items-center" role="status" aria-label="Loading">
       <div
-        className={`animate-spin rounded-full border-2 border-transparent border-b-[var(--hpi-color-on-accent,#f7f6f2)] ${sizeClasses[size]}`}
+        className={`animate-spin rounded-full border-2 border-transparent border-b-(--hpi-color-on-accent,#f7f6f2) ${sizeClasses[size]}`}
         aria-hidden="true"
       ></div>
     </div>

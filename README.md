@@ -22,7 +22,7 @@ This is a model-based estimator for learning and portfolio use. It is **not** a 
 - **Frontend:** React, Vite, Tailwind CSS, Axios, React Router
 - **Backend:** FastAPI, Uvicorn, SQLAlchemy, PostgreSQL
 - **ML:** pandas, NumPy, scikit-learn
-- **Auth:** JWT (python-jose) + bcrypt
+- **Auth:** JWT (PyJWT) + bcrypt
 
 ## Project structure
 
