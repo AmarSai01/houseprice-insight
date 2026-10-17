@@ -2,6 +2,28 @@
  * Shared property fields and validation for Estimate and Compare flows.
  */
 
+import { MODEL_LOCALITIES } from "../constants/localities.js";
+
+const normalizeLocalityKey = (value) =>
+  String(value ?? "")
+    .trim()
+    .replace(/\s+/g, " ")
+    .toLowerCase();
+
+const LOCALITY_BY_KEY = new Map(
+  MODEL_LOCALITIES.map((name) => [normalizeLocalityKey(name), name]),
+);
+
+/**
+ * Model locality matching is exact, so "whitefield" would fall into "Other".
+ * Map user input to the model's spelling when it differs only by case/spacing.
+ * @param {unknown} value
+ * @returns {string | null} canonical locality, or null if the model does not know it
+ */
+export function matchModelLocality(value) {
+  return LOCALITY_BY_KEY.get(normalizeLocalityKey(value)) ?? null;
+}
+
 export const AREA_TYPE_OPTIONS = [
   "Super built-up  Area",
   "Built-up  Area",
@@ -57,7 +79,7 @@ export function validatePropertyForm(form) {
 export function buildPredictPayload(form) {
   return {
     area_type: form.area_type,
-    location: String(form.location).trim(),
+    location: matchModelLocality(form.location) ?? String(form.location).trim(),
     total_sqft: Number(form.total_sqft),
     bhk: Number.parseInt(String(form.bhk), 10),
     bath: Number(form.bath),
