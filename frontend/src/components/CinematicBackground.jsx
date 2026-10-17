@@ -65,7 +65,7 @@ const CinematicBackground = ({
     >
       {/* Same architectural image site-wide */}
       <div
-        className="absolute -inset-[6%] will-change-transform"
+        className="absolute inset-[-6%] will-change-transform"
         style={{
           transform: imageTransform,
           transition: allowMotion
@@ -75,7 +75,7 @@ const CinematicBackground = ({
       >
         <div
           className={[
-            "absolute inset-0 bg-cover bg-[center_42%]",
+            "absolute inset-0 bg-cover bg-position-[center_42%]",
             allowMotion ? "hpi-cinematic-drift" : "",
           ]
             .filter(Boolean)

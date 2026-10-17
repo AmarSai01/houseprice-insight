@@ -9,7 +9,8 @@ import hashlib
 import secrets
 import os
 
-from jose import JWTError, jwt
+import jwt
+from jwt import PyJWTError
 import bcrypt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
@@ -137,7 +138,7 @@ def get_valid_reset_token(
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     """Create a JWT access token."""
     to_encode = data.copy()
-    # JWT 'sub' must be a string (python-jose claim validation).
+    # JWT 'sub' must be a string (PyJWT validates it as a string claim).
     if "sub" in to_encode and to_encode["sub"] is not None:
         to_encode["sub"] = str(to_encode["sub"])
     if expires_delta:
@@ -167,7 +168,7 @@ def get_current_user(
         if subject is None:
             raise credentials_exception
         user_id = int(subject)
-    except (JWTError, TypeError, ValueError):
+    except (PyJWTError, TypeError, ValueError):
         raise credentials_exception
 
     user = db.query(User).filter(User.id == user_id).first()
@@ -203,7 +204,7 @@ def get_optional_current_user(
         if subject is None:
             return None
         user_id = int(subject)
-    except (JWTError, TypeError, ValueError):
+    except (PyJWTError, TypeError, ValueError):
         return None
 
     return db.query(User).filter(User.id == user_id).first()

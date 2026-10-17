@@ -97,7 +97,7 @@ const UserDashboard = () => {
       <header className="hpi-nav relative">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#173f3a] text-white shadow-sm">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#173f3a] text-white shadow-xs">
               <Building2 size={18} strokeWidth={2} />
             </div>
             <div>

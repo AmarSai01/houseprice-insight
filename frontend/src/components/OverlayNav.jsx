@@ -18,7 +18,7 @@ const OverlayNav = ({ active = "" }) => {
 
   return (
     <header className="hpi-overlay-nav">
-      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex h-17 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8 lg:px-10">
         <Link to="/" className="relative z-10 flex shrink-0 items-center gap-2.5">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#173f3a] text-white">
             <Building2 size={16} strokeWidth={2} />
