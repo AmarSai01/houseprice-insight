@@ -20,7 +20,7 @@ BACKEND_DIR = Path(__file__).resolve().parents[1]
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
-# Validate the test DB URL BEFORE importing database/main (those resolve DATABASE_URL).
+# Validate the test DB URL BEFORE importing database/main (engine binds via configure_engine).
 from test_db_safety import (  # noqa: E402
     MISSING_TEST_DATABASE_URL_ERROR,
     TEST_DATABASE_NAME,
