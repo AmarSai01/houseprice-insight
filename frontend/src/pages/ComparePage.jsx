@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Loader2, Menu, X } from "lucide-react";
+import LocalityDatalist from "../components/LocalityDatalist";
 import PropertyFormFields from "../components/PropertyFormFields";
 import api from "../services/api";
 import { getApiErrorMessage } from "../services/apiErrors";
@@ -397,6 +398,7 @@ const ComparePage = () => {
         </header>
 
         <form onSubmit={handleCompare} noValidate>
+          <LocalityDatalist />
           <div className="hpi-est-compare-grid">
             <section
               className="hpi-est-compare-panel"

@@ -26,6 +26,10 @@ import {
   formatSimilarityPercent,
   similarPayloadKey,
 } from "../services/similarProperties";
+import LocalityDatalist, {
+  LOCALITY_DATALIST_ID,
+  getLocalityHint,
+} from "../components/LocalityDatalist";
 import { PRODUCT_NAV_LINKS } from "../constants/navLinks";
 import { useAuth } from "../contexts/AuthContext";
 import "./EstimatePage.css";
@@ -351,6 +355,7 @@ const EstimatePage = () => {
                     placeholder="e.g. Whitefield"
                     className={inputClass("location")}
                     autoComplete="off"
+                    list={LOCALITY_DATALIST_ID}
                     aria-invalid={errors.location ? true : undefined}
                     aria-describedby={
                       errors.location
@@ -358,8 +363,9 @@ const EstimatePage = () => {
                         : "location-hint"
                     }
                   />
-                  <p id="location-hint" className="hpi-est-hint">
-                    Enter a Bengaluru locality.
+                  <LocalityDatalist />
+                  <p id="location-hint" className="hpi-est-hint" aria-live="polite">
+                    {getLocalityHint(form.location)}
                   </p>
                   {errors.location && (
                     <p

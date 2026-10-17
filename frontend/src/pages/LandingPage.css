@@ -397,26 +397,6 @@ a.ai-btn--final:hover {
   min-width: 0;
 }
 
-.ai-hero-lockup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  margin: 0 0 1.75rem;
-  font-family: var(--ai-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-  color: var(--ai-green);
-}
-
-.ai-hero-lockup span:last-child {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ai-faint);
-}
-
 .ai-hero-title {
   margin: 0;
   font-family: var(--ai-display);
@@ -427,6 +407,14 @@ a.ai-btn--final:hover {
   text-transform: uppercase;
   color: var(--ai-ink);
   overflow-wrap: anywhere;
+}
+
+/* Two-column hero: the title gets ~44% of the viewport, and "PROPERTY" is ~5em
+   wide, so size from the column rather than the viewport to avoid "PROPERT/Y". */
+@media (min-width: 960px) {
+  .ai-hero-title {
+    font-size: clamp(3rem, 8vw, 6.75rem);
+  }
 }
 
 .ai-hero-lead {

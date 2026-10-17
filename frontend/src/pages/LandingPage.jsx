@@ -266,10 +266,6 @@ const LandingPage = () => {
         <section className="ai-hero" aria-labelledby="ai-hero-title">
           <div className="ai-shell ai-hero-grid">
             <div className="ai-hero-copy">
-              <p className="ai-hero-lockup" aria-hidden="true">
-                <span>HousePrice</span>
-                <span>/ Insight</span>
-              </p>
               <h1 id="ai-hero-title" className="ai-hero-title">
                 Know what
                 <br />
