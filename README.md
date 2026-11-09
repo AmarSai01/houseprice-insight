@@ -4,19 +4,19 @@
 
 <br>
 
-[![Live site](https://img.shields.io/badge/live-housepriceinsight.amarsai.in-1f2c26?style=for-the-badge&labelColor=a8834b)](https://housepriceinsight.amarsai.in)
-[![Test R²](https://img.shields.io/badge/test_R²-0.69-1f2c26?style=for-the-badge&labelColor=a8834b)](#-model-results)
-[![License: MIT](https://img.shields.io/badge/license-MIT-1f2c26?style=for-the-badge&labelColor=a8834b)](LICENSE)
+[![Live site](docs/readme/badges/live-site.svg)](https://housepriceinsight.amarsai.in)
+[![Test R²](docs/readme/badges/test-r.svg)](#-model-results)
+[![License: MIT](docs/readme/badges/license-mit.svg)](LICENSE)
 
-![Python](https://img.shields.io/badge/Python-3.13-1f2c26?logo=python&logoColor=f1eee6)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1f2c26?logo=scikitlearn&logoColor=f1eee6)
-![pandas](https://img.shields.io/badge/pandas-1f2c26?logo=pandas&logoColor=f1eee6)
-![FastAPI](https://img.shields.io/badge/FastAPI-1f2c26?logo=fastapi&logoColor=f1eee6)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1f2c26?logo=postgresql&logoColor=f1eee6)
-![React](https://img.shields.io/badge/React_18-1f2c26?logo=react&logoColor=f1eee6)
-![Vite](https://img.shields.io/badge/Vite-1f2c26?logo=vite&logoColor=f1eee6)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-1f2c26?logo=tailwindcss&logoColor=f1eee6)
-![Vercel](https://img.shields.io/badge/Vercel-1f2c26?logo=vercel&logoColor=f1eee6)
+![Python](docs/readme/badges/python.svg)
+![scikit-learn](docs/readme/badges/scikit-learn.svg)
+![pandas](docs/readme/badges/pandas.svg)
+![FastAPI](docs/readme/badges/fastapi.svg)
+![PostgreSQL](docs/readme/badges/postgresql.svg)
+![React](docs/readme/badges/react.svg)
+![Vite](docs/readme/badges/vite.svg)
+![Tailwind CSS](docs/readme/badges/tailwind-css.svg)
+![Vercel](docs/readme/badges/vercel.svg)
 
 **Know what a Bengaluru property is worth, and why.**<br>
 An instant price estimate with an honest range, the features that drive the model, and similar recorded properties to check it against.
@@ -201,7 +201,7 @@ Environment variables, the two-project Vercel setup and the admin API are docume
 
 **Amar Sai** (Amareshwar Thuraka)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-amareshwar9347-1f2c26?style=flat-square&logo=linkedin&logoColor=f1eee6)](https://www.linkedin.com/in/amareshwar9347)
-[![GitHub](https://img.shields.io/badge/GitHub-AmarSai01-1f2c26?style=flat-square&logo=github&logoColor=f1eee6)](https://github.com/AmarSai01)
+[![LinkedIn](docs/readme/badges/linkedin.svg)](https://www.linkedin.com/in/amareshwar9347)
+[![GitHub](docs/readme/badges/github.svg)](https://github.com/AmarSai01)
 
 If this project helped you, a ⭐ is appreciated.
